@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to D&D</title>
+  <link rel="icon" type="image/png" href="./pic/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="./pic/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="./pic/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./pic/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="welcome to dnd" />
+  <link rel="manifest" href="./pic/favicon/site.webmanifest" />
+  <link rel="stylesheet" href="./css/home-style.css">
+</head>
+<body>
+  <audio id="bgm" src="./music/Marcin Przybyłowicz - Merchants of Novigrad.mp3" autoplay loop muted></audio>
+
+  <section class="intro">
+  <div class="welcome-container">
+    <div id="particles-js"></div> <!-- 粒子背景层 -->
+    <img src="./pic/welcome.png" alt="欢迎图" class="welcome-img">
+
+  </div>
+</section>
+
+
+  <section class="photo-section">
+    <img id="background-image" src="./pic/background.png" class="hidden" alt="Background" />
+    <div class="photo-container">
+
+      <img id="original-photo" src="./pic/20250512123654.png" alt="图片">
+      <div class="overlay-content">
+        <h2 class="overlay-text">Ready to start the adventure?</h2>
+        <button class="start-btn">Yes!</button>
+      </div>
+    </div>
+    
+    <div class="button-group hidden">
+    <a href="./html/introduction.html"  class="nav-button" style="top:20%;left: 15%;"><img src="./pic/intro-button.png" alt="简介" /></a>
+    <a href="./html/character.html" class="nav-button" style="top:20%;right: 15%;"><img src="./pic/character-button.png" alt="创建角色" /></a>
+    <a href="./html/combat.html" class="nav-button" style="bottom:15%;left: 15%;"><img src="./pic/combat-button.png" alt="战斗" /></a>
+    <a href="./html/spell.html" class="nav-button" style="bottom:15%;right: 15%;"><img src="./pic/spells-button.png" alt="法术" /></a>
+    </div>
+  </div>
+  
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="./js/home-script.js"></script>
+
+</body>
+</html>

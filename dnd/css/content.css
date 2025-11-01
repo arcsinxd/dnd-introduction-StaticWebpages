@@ -1,0 +1,81 @@
+body {
+  cursor: url("../pic/cursor1.png"), auto;
+
+}
+#background-image 
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: top;
+  z-index: -1;  /* 放在最底层 */
+}
+
+.content {
+  position: relative;
+  z-index: 1;  /* 确保内容在背景之上 */
+  color: black;
+  padding: 5vh 5vw;
+}
+
+#title-image{
+  display: absolute;
+  top:10vh;
+  left: 5vw; 
+  width: 10vw;
+  height: auto;
+  z-index: 0;
+}
+
+#text-container {
+  column-count: 2;               /* 分两栏 */
+  column-gap: 3em;               /* 两栏之间的间距 */
+  column-fill: auto;
+  height: 75vh;
+  font-family: "SimSun", "宋体", serif;
+  font-size: 1.4em;
+  border-radius: 10px;
+
+  transition: opacity 0.5s ease; /* 翻页动画 */
+}
+
+.page-button {
+  position: fixed;
+  top: 50%;
+  width: 3vw;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  z-index: 2;
+  transform: translateY(-50%);
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  cursor: url("../pic/cursor1.png"), auto;
+
+}
+
+.page-button:hover {
+  opacity: 1;
+}
+
+#prev-button {
+  left: 1vw;
+}
+
+#next-button {
+  right: 1vw;
+}
+
+.extra-bold {
+  font-family: "SimHei", "黑体", sans-serif;
+  font-style: italic;
+}
+
+#dice-image {
+  display: absolute;
+  height: auto;
+  z-index: 0;
+}

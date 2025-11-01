@@ -1,0 +1,190 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth; /* 平滑滚动 */
+  overflow: hidden;         /* 防止连续滚动 */
+  cursor: url("../pic/cursor1.png"), auto; /* 鼠标指针样式 */
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+}
+
+.intro {
+  background-color: rgb(50, 9, 9);
+  min-height: 100vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  z-index: 1;
+  position: relative;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0; left: 0;
+  z-index: 0; /* 背景层 */
+}
+
+.welcome-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  z-index: 2; /* 显示在粒子前面 */
+}
+
+.welcome-img {
+  width: 100vw; /* 控制图片宽度 */
+  height: 100vh;
+  opacity: 0;
+  transition: opacity 3s ease, transform 3s ease;
+}
+
+.welcome-img.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.photo-section {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 0;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-container img {
+  width: 90vw;
+  height: auto;
+  display: block;
+}
+
+.photo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 90vw;
+  height: 90vh;
+  overflow: hidden;
+}
+
+
+#original-photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.overlay-content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  text-align: center;
+  color: white;
+}
+
+.overlay-text {
+  font-size: 5em;
+  margin-bottom: 20px;
+}
+
+.start-btn {
+  padding: 10px 20px;
+  font-size: 1.5em;
+  border: none;
+  border-radius: 25px;
+  background-color: darkred;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  cursor: url("../pic/cursor1.png"), auto;
+}
+
+.start-btn:hover {
+  background-color: crimson;
+}
+
+
+
+/* 背景图片 */
+#background-image {
+  position: fixed;           /* 默认占满整个视口 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;          /* 高度自适应 */
+  object-fit: cover;       /* 保证完整显示 */
+  object-position: top;
+  opacity: 0;
+  z-index: 2;
+  transition: opacity 1s ease;
+  pointer-events: none;
+}
+
+/* 仅用于渐显 */
+#background-image.visible {
+  opacity: 1;
+}
+
+/* 当需要限制在 section 范围时添加这个类 */
+#background-image.limit-to-section {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.button-group {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* 隐藏时不响应点击 */
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+/* 渐显类 */
+.button-group.visible {
+  opacity: 1;
+  pointer-events: auto; 
+}
+
+/* 每个按钮样式 */
+.nav-button {
+  position: absolute;
+  display: block;
+  width: 25vw;       /* 或设定为固定宽度，比如 width: 200px;  */
+  height: auto;      /* 默认保持图片原始比例 */
+  cursor: pointer;
+  user-select: none;
+  transition: transform 1s ease;
+  cursor: url("../pic/cursor1.png"), auto;
+
+}
+
+.nav-button img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.nav-button:hover {
+  transform: scale(1.05);
+}
